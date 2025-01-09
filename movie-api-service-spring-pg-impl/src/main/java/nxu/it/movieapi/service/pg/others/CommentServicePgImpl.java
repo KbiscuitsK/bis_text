@@ -1,12 +1,11 @@
-package nxu.it.movieapi.service.pg;
+package nxu.it.movieapi.service.pg.others;
 
 import nxu.it.api.common.param.PageQueryParam;
 import nxu.it.api.common.result.BasePage;
 import nxu.it.api.common.result.Pageable;
 import nxu.it.api.model.Comment;
 import nxu.it.api.service.CommentService;
-import nxu.it.movieapi.service.pg.dao.CommentDao;
-import nxu.it.movieapi.service.pg.mapper.CommentMapper;
+import nxu.it.movieapi.service.pg.PageUtil;
 import org.seasar.doma.jdbc.SelectOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

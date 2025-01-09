@@ -1,11 +1,10 @@
-package nxu.it.movieapi.service.pg;
+package nxu.it.movieapi.service.pg.others;
 
 import nxu.it.api.model.Cast;
 import nxu.it.api.model.CastRole;
 import nxu.it.api.model.Filmography;
 import nxu.it.api.service.MockResult;
 import nxu.it.api.service.MovieCastService;
-import nxu.it.movieapi.service.pg.dao.MovieCastDao;
 import nxu.it.movieapi.service.pg.mapper.MovieCastMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
