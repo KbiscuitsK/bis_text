@@ -1,7 +1,6 @@
 package nxu.it.movieapi.controller;
 
 
-import nxu.it.api.common.param.PageQueryParam;
 import nxu.it.api.common.result.ApiResult;
 import nxu.it.api.common.result.Pageable;
 import nxu.it.api.common.result.ResponseType;
