@@ -1,5 +1,6 @@
 package nxu.it.movieapi.service.pg.dao;
 
+import nxu.it.movieapi.service.pg.entity.OrderEntity;
 import org.seasar.doma.Dao;
 import org.seasar.doma.Select;
 import org.seasar.doma.boot.ConfigAutowireable;
@@ -8,11 +9,10 @@ import java.util.List;
 
 @Dao
 @ConfigAutowireable
-public interface GenreDao {
+public interface OrderDao {
     @Select
-    List<GenreEntity> findAll();
+    List<OrderEntity> page();
+
     @Select
-    List<GenreEntity> findByMovieId(Integer id);
-    @Select
-    List<GenreEntity> findByName(String name);
+    OrderEntity findById(int id);
 }

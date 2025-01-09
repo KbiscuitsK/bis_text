@@ -1,4 +1,4 @@
-package nxu.it.movieapi.service.pg;
+package nxu.it.movieapi.service.pg.others;
 
 import nxu.it.api.common.result.BasePage;
 import nxu.it.api.common.result.Pageable;
@@ -7,8 +7,8 @@ import nxu.it.api.service.GenreService;
 import nxu.it.api.service.MovieCastService;
 import nxu.it.api.service.StaffService;
 import nxu.it.api.service.param.StaffPageQueryParam;
+import nxu.it.movieapi.service.pg.PageUtil;
 import nxu.it.movieapi.service.pg.dao.ProductDao;
-import nxu.it.movieapi.service.pg.mapper.StaffMapper;
 import org.jetbrains.annotations.NotNull;
 import org.seasar.doma.jdbc.SelectOptions;
 import org.springframework.beans.factory.annotation.Autowired;

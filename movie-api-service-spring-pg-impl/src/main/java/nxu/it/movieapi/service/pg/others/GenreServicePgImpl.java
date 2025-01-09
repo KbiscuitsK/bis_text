@@ -1,9 +1,7 @@
-package nxu.it.movieapi.service.pg;
+package nxu.it.movieapi.service.pg.others;
 
-import nxu.it.movieapi.service.pg.dao.GenreDao;
 import nxu.it.api.model.Genre;
 import nxu.it.api.service.GenreService;
-import nxu.it.movieapi.service.pg.mapper.GenreMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.util.List;
