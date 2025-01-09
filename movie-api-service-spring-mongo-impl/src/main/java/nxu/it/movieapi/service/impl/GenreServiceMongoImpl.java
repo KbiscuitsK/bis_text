@@ -1,4 +1,4 @@
-package nxu.it.movieapi.service;
+package nxu.it.movieapi.service.impl;
 
 import nxu.it.api.model.Genre;
 import nxu.it.api.service.GenreService;
