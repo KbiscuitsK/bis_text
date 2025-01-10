@@ -1,1 +1,0 @@
-SELECT * FROM genre WHERE name LIKE '%' || /* name */'情色' || '%' order by id;

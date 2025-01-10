@@ -18,5 +18,5 @@ public interface ProductDao {
     Optional<ProductEntity> findById(Integer staffId);
 
     @Select
-    List<ProductEntity> page(StaffPageQueryParam param,SelectOptions options);
+    List<ProductEntity> findAll(StaffPageQueryParam param,SelectOptions options);
 }
