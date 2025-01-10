@@ -1,4 +1,4 @@
-package nxu.it.movieapi.service;
+package nxu.it.movieapi.service.impl;
 
 import nxu.it.api.common.result.BasePage;
 import nxu.it.api.common.result.Pageable;
