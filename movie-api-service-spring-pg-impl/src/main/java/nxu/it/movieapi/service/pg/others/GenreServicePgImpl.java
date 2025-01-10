@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.pg.others;
 
 import nxu.it.api.model.Genre;
@@ -39,3 +40,4 @@ public class GenreServicePgImpl implements GenreService {
         return genres;
     }
 }
+*/

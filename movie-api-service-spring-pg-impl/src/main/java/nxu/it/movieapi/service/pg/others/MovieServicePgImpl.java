@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.pg.others;
 
 import nxu.it.api.common.result.BasePage;
@@ -67,3 +68,4 @@ public class MovieServicePgImpl implements MovieService {
         return moviePage;
     }
 }
+*/

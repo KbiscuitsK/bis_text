@@ -50,6 +50,11 @@
             <artifactId>movie-api-service-spring-mongo-impl</artifactId>
             <version>3.0</version>
         </dependency>
+        <dependency>
+            <groupId>nxu.it</groupId>
+            <artifactId>manage-api-spring-common</artifactId>
+            <version>3.0</version>
+        </dependency>
 
     </dependencies>
 

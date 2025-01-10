@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.controller;
 
 
@@ -82,3 +83,4 @@ public class MovieApiV1Controller {
         return ApiResult.fail(ResponseType.NOT_FOUND);
     }
 }
+*/

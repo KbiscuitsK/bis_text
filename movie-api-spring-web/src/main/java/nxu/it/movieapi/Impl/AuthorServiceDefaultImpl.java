@@ -1,4 +1,4 @@
-package nxu.it.movieapi.service.Impl;
+package nxu.it.movieapi.Impl;
 
 import nxu.it.api.model.Author;
 import nxu.it.movieapi.service.AuthorService;

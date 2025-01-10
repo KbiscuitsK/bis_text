@@ -52,7 +52,7 @@
 
         <dependency>
             <groupId>nxu.it</groupId>
-            <artifactId>movie-api-spring-web</artifactId>
+            <artifactId>manage-api-spring-common</artifactId>
             <version>3.0</version>
         </dependency>
 

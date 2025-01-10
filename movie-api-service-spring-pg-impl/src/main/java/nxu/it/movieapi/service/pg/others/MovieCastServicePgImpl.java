@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.pg.others;
 
 import nxu.it.api.model.Cast;
@@ -45,3 +46,4 @@ public class MovieCastServicePgImpl implements MovieCastService {
         return role == CastRole.ACTOR ? MockResult.ACTED : MockResult.DIRECTED;
     }
 }
+*/

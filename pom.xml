@@ -26,6 +26,7 @@
         <module>movie-api-service-spring-pg-impl</module>
         <module>movie-api-service-spring-mongo-impl</module>
         <module>movie-api-service-spring-neo4j-impl</module>
+        <module>manage-api-spring-common</module>
 
     </modules>
 

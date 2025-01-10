@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.pg.others;
 
 import nxu.it.api.common.param.PageQueryParam;
@@ -51,3 +52,4 @@ public class CommentServicePgImpl implements CommentService{
         return moviePage;
     }
 }
+*/
