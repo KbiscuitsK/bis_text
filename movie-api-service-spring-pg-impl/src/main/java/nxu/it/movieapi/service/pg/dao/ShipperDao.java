@@ -1,6 +1,6 @@
 package nxu.it.movieapi.service.pg.dao;
 
-import nxu.it.movieapi.service.pg.entity.OrderEntity;
+import nxu.it.movieapi.eneity.Shipper;
 import nxu.it.movieapi.service.pg.entity.ShipperEntity;
 import org.seasar.doma.Dao;
 import org.seasar.doma.Select;
@@ -11,10 +11,7 @@ import java.util.Optional;
 
 @Dao
 @ConfigAutowireable
-public interface OrderDao {
+public interface ShipperDao {
     @Select
-    List<OrderEntity> findAll();
-
-    @Select
-    Optional<OrderEntity> findById(int id);
+    List<ShipperEntity> findAll();
 }
