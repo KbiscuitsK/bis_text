@@ -1,4 +1,4 @@
-package nxu.it.movieapi.controller;
+package nxu.it.movieapi.utils;
 
 public class MyResult {
     private Integer code=200;

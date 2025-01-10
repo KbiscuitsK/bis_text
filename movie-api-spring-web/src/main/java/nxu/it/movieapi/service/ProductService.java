@@ -5,7 +5,10 @@ import nxu.it.api.common.result.Pageable;
 import nxu.it.movieapi.eneity.Order;
 import nxu.it.movieapi.eneity.Product;
 
+import javax.validation.constraints.NotNull;
+import java.util.Optional;
+
 public interface ProductService {
     Pageable<Product> page(PageQueryParam param);
-    Pageable<Product> pageById(int id,PageQueryParam param);
+    Optional<Product> findById(@NotNull Integer productId);
 }
