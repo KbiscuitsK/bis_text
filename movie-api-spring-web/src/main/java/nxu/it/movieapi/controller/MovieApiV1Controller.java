@@ -51,7 +51,7 @@ public class MovieApiV1Controller {
 
     @GetMapping("/movie/{movieId}")
     public ApiResult<Movie> getMovieDetails(@PathVariable Integer movieId) {
-        Optional<Movie> movieOptional = movieServiceImpl.findById(movieId);
+        Optional<Movie> movieOptional = movieServiceImpl.pageById(movieId);
         if (movieOptional.isPresent()){
             return ApiResult.success(movieOptional.get());
         }
@@ -76,7 +76,7 @@ public class MovieApiV1Controller {
 
     @GetMapping("staff/{staffId}")
     public ApiResult<Staff> getStaffDetails(@PathVariable Integer staffId) {
-        Optional<Staff> staffOptional = staffServiceImpl.findById(staffId);
+        Optional<Staff> staffOptional = staffServiceImpl.pageById(staffId);
         if (staffOptional.isPresent()) {
             return ApiResult.success(staffOptional.get());
         }

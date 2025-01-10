@@ -17,7 +17,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Optional<Product> findById(Integer productId) {
+    public Optional<Product> pageById(Integer productId) {
         return Optional.empty();
     }
 }

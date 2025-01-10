@@ -33,8 +33,8 @@ public class StaffServicePgImpl implements StaffService {
     @Autowired
     MovieCastService movieCastService;
 
-    public Optional<Staff> findById(@org.jetbrains.annotations.NotNull Integer staffId){
-            Optional<StaffEntity> staffEntityOpt = staffDao.findById(staffId);
+    public Optional<Staff> pageById(@org.jetbrains.annotations.NotNull Integer staffId){
+            Optional<StaffEntity> staffEntityOpt = staffDao.pageById(staffId);
             return staffEntityOpt.map(staffEntity -> {
                 Staff staff = staffMapper.fromEntity(staffEntity);
                 List<Filmography> movieList= movieCastService.findMoviesByStaffId(staffId);

@@ -15,8 +15,8 @@ import java.util.Optional;
 public interface ProductDao {
 
     @Select
-    Optional<ProductEntity> findById(Integer staffId);
+    Optional<ProductEntity> findById(int id);
 
     @Select
-    List<ProductEntity> findAll(StaffPageQueryParam param,SelectOptions options);
+    List<ProductEntity> findAll();
 }

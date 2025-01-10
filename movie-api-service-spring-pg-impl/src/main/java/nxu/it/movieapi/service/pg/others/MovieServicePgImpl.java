@@ -33,8 +33,8 @@ public class MovieServicePgImpl implements MovieService {
     @Autowired
     MovieCastService movieCastService;
 
-    public Optional<Movie> findById(@NotNull Integer movieId) {
-        Optional<MovieEntity> movieEntityopt = movieDao.findById(movieId);
+    public Optional<Movie> pageById(@NotNull Integer movieId) {
+        Optional<MovieEntity> movieEntityopt = movieDao.pageById(movieId);
         return movieEntityopt.map(movieEntity -> {
             Movie movie = movieMapper.fromEntity(movieEntity);
             List<Genre> genreList = genreService.findByMovieId(movieId);

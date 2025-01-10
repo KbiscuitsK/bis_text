@@ -43,7 +43,7 @@ public class ProductServiceMongoImpl implements ProductService {
     }
 
     @Override
-    public Optional<Product> findById(@NotNull Integer productId) {
+    public Optional<Product> pageById(@NotNull Integer productId) {
         ProductDoc productDoc = mongoTemplate.findById(productId, ProductDoc.class);
         Product product = productMapper.fromDoc(productDoc);
         return Optional.ofNullable(product);

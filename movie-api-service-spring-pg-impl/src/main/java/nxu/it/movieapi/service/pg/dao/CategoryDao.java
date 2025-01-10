@@ -9,5 +9,5 @@ import java.util.List;
 @Dao
 @ConfigAutowireable
 public interface CategoryDao {
-    List<CategoryEntity> findAll();
+    List<CategoryEntity> findByValue(int level);
 }
