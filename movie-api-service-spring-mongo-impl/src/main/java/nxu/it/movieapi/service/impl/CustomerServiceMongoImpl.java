@@ -40,6 +40,6 @@ public class CustomerServiceMongoImpl implements CustomerService {
         // 总页数
         int totalPages = (int) ((total + pageSize - 1) / pageSize);
         List<Customer> customers = customerMapper.fromDocList(customerDocs);
-        return new BasePage<>(customers, pageNumber, pageSize, totalPages, (int) total);
+        return new BasePage<>(customers, param.getPageNumber(), pageSize, totalPages, (int) total);
     }
 }
