@@ -5,7 +5,6 @@ import nxu.it.api.common.result.BasePage;
 import nxu.it.api.common.result.Pageable;
 import nxu.it.movieapi.eneity.Product;
 import nxu.it.movieapi.service.ProductService;
-import nxu.it.movieapi.service.doc.MovieDoc;
 import nxu.it.movieapi.service.doc.ProductDoc;
 import nxu.it.movieapi.service.mapper.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +33,7 @@ public class ProductServiceMongoImpl implements ProductService {
         // 查询
         List<ProductDoc> productDocs = mongoTemplate.find(query, ProductDoc.class);
         // 总记录数
-        long total = mongoTemplate.count(query.skip(0).limit(0), MovieDoc.class);
+        long total = mongoTemplate.count(query.skip(0).limit(0), ProductDoc.class);
         // 总页数
         int totalPages = (int) ((total + pageSize - 1) / pageSize);
         List<Product> productList = productMapper.fromDocList(productDocs);

@@ -1,10 +1,16 @@
-package nxu.it.movieapi.eneity;
+package nxu.it.movieapi.service.doc;
+
+import nxu.it.movieapi.eneity.Order;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Employee {
+@Document(collection = "employee")
+public class EmployeeDoc {
+    @Id
     private Integer id;
     private String name;
     private String title;
@@ -14,7 +20,9 @@ public class Employee {
     private String region;
     private String phone;
     private String photo;
-    private List<Order> orders;
+    private List<CustomerOrderDoc> orders = new ArrayList<>(
+
+    );
 
 
     public Integer getId() {
@@ -89,11 +97,11 @@ public class Employee {
         this.photo = photo;
     }
 
-    public List<Order> getOrders() {
+    public List<CustomerOrderDoc> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<Order> orders) {
+    public void setOrders(List<CustomerOrderDoc> orders) {
         this.orders = orders;
     }
 
@@ -112,4 +120,5 @@ public class Employee {
                 ", orders=" + orders +
                 '}';
     }
+
 }

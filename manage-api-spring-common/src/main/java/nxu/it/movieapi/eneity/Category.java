@@ -1,8 +1,11 @@
 package nxu.it.movieapi.eneity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 public class Category {
     private Integer id;
     private String name;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Integer parentId;
     private Integer level;
 

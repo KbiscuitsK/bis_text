@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.mapper;
 
 import nxu.it.api.model.Comment;
@@ -11,3 +12,4 @@ public interface CommentMapper {
     Comment fromDoc(CommentDoc commentDoc);
     List<Comment> fromDocList(List<CommentDoc> commentDocList);
 }
+*/

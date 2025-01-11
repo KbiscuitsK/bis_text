@@ -1,50 +1,55 @@
 package nxu.it.movieapi.eneity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Order {
-    private Integer id;
+    private String id;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Integer customerId;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Integer employeeId;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private LocalDateTime orderDate;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private LocalDateTime arrivalDate;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private LocalDateTime shipDate;
-    private LocalDateTime shipperId;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Long shipperId;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Long trackingNumber;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Double freight;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String contact;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String phone;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String shipAddress;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String shipProvince;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String shipCity;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String shipRegion;
-
-    public Order() {
-    }
-
-    public Order(Integer id, Integer customerId, Integer employeeId, LocalDateTime orderDate, LocalDateTime arrivalDate, LocalDateTime shipDate, LocalDateTime shipperId, Long trackingNumber, Double freight, String contact, String phone, String shipAddress, String shipProvince, String shipCity, String shipRegion) {
-        this.id = id;
-        this.customerId = customerId;
-        this.employeeId = employeeId;
-        this.orderDate = orderDate;
-        this.arrivalDate = arrivalDate;
-        this.shipDate = shipDate;
-        this.shipperId = shipperId;
-        this.trackingNumber = trackingNumber;
-        this.freight = freight;
-        this.contact = contact;
-        this.phone = phone;
-        this.shipAddress = shipAddress;
-        this.shipProvince = shipProvince;
-        this.shipCity = shipCity;
-        this.shipRegion = shipRegion;
-    }
-
-    public Integer getId() {
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Customer customer;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Double totalAmount;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Object shipInfo;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Employee employee;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private List<Object> details;
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -88,11 +93,11 @@ public class Order {
         this.shipDate = shipDate;
     }
 
-    public LocalDateTime getShipperId() {
+    public Long getShipperId() {
         return shipperId;
     }
 
-    public void setShipperId(LocalDateTime shipperId) {
+    public void setShipperId(Long shipperId) {
         this.shipperId = shipperId;
     }
 
@@ -160,10 +165,50 @@ public class Order {
         this.shipRegion = shipRegion;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Double getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(Double totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    public Object getShipInfo() {
+        return shipInfo;
+    }
+
+    public void setShipInfo(Object shipInfo) {
+        this.shipInfo = shipInfo;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public List<Object> getDetails() {
+        return details;
+    }
+
+    public void setDetails(List<Object> details) {
+        this.details = details;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", customerId=" + customerId +
                 ", employeeId=" + employeeId +
                 ", orderDate=" + orderDate +
@@ -178,6 +223,11 @@ public class Order {
                 ", shipProvince='" + shipProvince + '\'' +
                 ", shipCity='" + shipCity + '\'' +
                 ", shipRegion='" + shipRegion + '\'' +
+                ", customer=" + customer +
+                ", totalAmount=" + totalAmount +
+                ", shipInfo=" + shipInfo +
+                ", employee=" + employee +
+                ", details=" + details +
                 '}';
     }
 }

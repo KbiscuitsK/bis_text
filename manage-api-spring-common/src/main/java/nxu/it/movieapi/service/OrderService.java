@@ -6,5 +6,5 @@ import nxu.it.movieapi.eneity.Order;
 
 public interface OrderService {
     Pageable<Order> page(PageQueryParam param);
-    Pageable<Order> pageById(Integer id,PageQueryParam param);
+    Pageable<Order> pageById(Integer id);
 }

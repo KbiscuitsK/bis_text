@@ -10,11 +10,11 @@ import org.springframework.stereotype.Component;
 public class OrderServiceMongoImpl implements OrderService {
     @Override
     public Pageable<Order> page(PageQueryParam param) {
-        return null;
+
     }
 
     @Override
-    public Pageable<Order> pageById(Integer id, PageQueryParam param) {
+    public Pageable<Order> pageById(Integer id) {
         return null;
     }
 }

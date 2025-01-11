@@ -3,6 +3,7 @@ package nxu.it.movieapi.service.doc;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Document(collection = "product")
@@ -14,7 +15,7 @@ public class ProductDoc {
     private String name;
     private String photo;
     private String quantityPerUnit;
-    private List<ProductSupplierDoc> suppliers;
+    private List<ProductSupplierDoc> suppliers = new ArrayList<>();
     private Double unitPrice;
     private ProductCategoryDoc category;
     private String photoUrl;

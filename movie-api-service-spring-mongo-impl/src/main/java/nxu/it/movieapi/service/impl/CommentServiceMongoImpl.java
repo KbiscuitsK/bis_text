@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.impl;
 
 import nxu.it.api.common.param.PageQueryParam;
@@ -56,3 +57,4 @@ public class CommentServiceMongoImpl implements CommentService {
         return  new BasePage<>(commentList, pageNumber, pageSize, totalPages, (int) total);
     }
 }
+*/

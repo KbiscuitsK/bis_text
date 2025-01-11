@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.mapper;
 
 import nxu.it.api.model.Filmography;
@@ -11,3 +12,4 @@ public interface FilmographyMapper {
     Filmography fromDoc(FilmographyDoc filmographyDoc);
     List<Filmography> fromDocList(List<FilmographyDoc> filmographyDocList);
 }
+*/
