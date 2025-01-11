@@ -1,19 +1,27 @@
 package nxu.it.movieapi.eneity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
 public class Employee {
-    private Integer id;
+    private Integer  id;
     private String name;
     private String title;
     private String gender;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private LocalDate birthDate;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private LocalDate hireDate;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String region;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String phone;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String photo;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private List<Order> orders;
 
 

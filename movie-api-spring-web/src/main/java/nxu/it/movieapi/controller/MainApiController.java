@@ -108,9 +108,9 @@ public class MainApiController {
      * @param id
      * @return
      */
-    @PostMapping("/order/{id}")
-    public ApiResult<Pageable<Order>> getOrders(@PathVariable Integer id) {
-        Pageable<Order> page = orderService.pageById(id);
+    @GetMapping("/order/{id}")
+    public ApiResult<Optional<Order>> getOrders(@PathVariable String id) {
+        Optional<Order> page = orderService.pageById(id);
         return ApiResult.success(page);
     }
 
