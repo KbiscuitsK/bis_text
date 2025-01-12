@@ -43,7 +43,7 @@ public class MainApiController {
      * @return
      */
     @GetMapping("/product/{id}")
-    public ApiResult<Optional<Product>> getProduct(@PathVariable Integer id) {
+    public ApiResult<Optional<Product>> getProduct(@PathVariable String id) {
         Optional<Product> product = productService.pageById(id);
         return ApiResult.success(product);
     }
