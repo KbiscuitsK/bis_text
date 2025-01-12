@@ -6,7 +6,7 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring",uses = {ProductCategoryMapper.class, ProductSupplierMapper.class})
+@Mapper(componentModel = "spring",uses = {ProductCategoryMapper.class,ProductSupplierMapper.class})
 public interface ProductMapper {
     Product fromDoc(ProductDoc productDoc);
     List<Product> fromDocList(List<ProductDoc> productDocList);

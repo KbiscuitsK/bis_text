@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.mapper;
 
 import nxu.it.api.model.Cast;
@@ -11,3 +12,4 @@ public interface CastMapper {
     Cast fromDoc(CastDoc castDoc);
     List<Cast> fromDocList(List<CastDoc> castDocList);
 }
+*/

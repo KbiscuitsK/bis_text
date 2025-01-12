@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.impl;
 
 import nxu.it.api.model.Genre;
@@ -50,3 +51,4 @@ public class GenreServiceMongoImpl implements GenreService {
         return genreMapper.fromDocList(genreDocList);
     }
 }
+*/

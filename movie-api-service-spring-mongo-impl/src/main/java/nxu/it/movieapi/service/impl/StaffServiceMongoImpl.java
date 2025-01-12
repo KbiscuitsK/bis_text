@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.impl;
 
 import nxu.it.api.common.result.BasePage;
@@ -93,3 +94,4 @@ public class StaffServiceMongoImpl implements StaffService {
         return new BasePage<>(staffList, pageNumber, pageSize, totalPages, (int) total);
     }
 }
+*/

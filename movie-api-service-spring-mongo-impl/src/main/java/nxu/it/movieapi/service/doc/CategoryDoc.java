@@ -3,6 +3,7 @@ package nxu.it.movieapi.service.doc;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Document
@@ -11,7 +12,7 @@ public class CategoryDoc {
     private String id;
     private String name;
     private String level;
-    private List<CategoryChildrenDoc> children;
+    private List<CategoryChildrenDoc> children = new ArrayList<CategoryChildrenDoc>();
 
     public String getId() {
         return id;

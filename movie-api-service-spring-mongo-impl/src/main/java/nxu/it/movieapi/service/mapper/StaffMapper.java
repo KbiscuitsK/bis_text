@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.mapper;
 
 import nxu.it.api.model.SimpleStaff;
@@ -13,3 +14,4 @@ public interface StaffMapper {
     Staff fromDoc(StaffDoc staffDoc);
     List<SimpleStaff> fromDocList(List<StaffDoc> staffDocList);
 }
+*/

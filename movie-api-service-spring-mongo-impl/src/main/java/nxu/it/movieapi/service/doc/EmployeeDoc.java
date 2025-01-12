@@ -1,28 +1,28 @@
-package nxu.it.movieapi.eneity;
+package nxu.it.movieapi.service.doc;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
+import nxu.it.movieapi.eneity.Order;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Employee {
-    private Integer  id;
+@Document(collection = "employee")
+public class EmployeeDoc {
+    @Id
+    private Integer id;
     private String name;
     private String title;
     private String gender;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private LocalDate birthDate;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private LocalDate hireDate;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String region;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String phone;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String photo;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private List<Order> orders;
+    private List<CustomerOrderDoc> orders = new ArrayList<>(
+
+    );
 
 
     public Integer getId() {
@@ -97,11 +97,11 @@ public class Employee {
         this.photo = photo;
     }
 
-    public List<Order> getOrders() {
+    public List<CustomerOrderDoc> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<Order> orders) {
+    public void setOrders(List<CustomerOrderDoc> orders) {
         this.orders = orders;
     }
 
@@ -120,4 +120,5 @@ public class Employee {
                 ", orders=" + orders +
                 '}';
     }
+
 }

@@ -1,3 +1,4 @@
+/*
 package nxu.it.movieapi.service.mapper;
 
 import nxu.it.api.model.Movie;
@@ -14,3 +15,4 @@ public interface MovieMapper {
     List<SimpleMovie> fromDocList(List <MovieDoc> movieDocList);
 
 }
+*/

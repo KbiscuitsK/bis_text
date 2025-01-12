@@ -1,20 +1,19 @@
 package nxu.it.movieapi.service.doc;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document
-public class ProductSupplierDoc {
+public class OrderShipDoc {
     @Field("id")
-    private Long id;
+    private Integer id;
     private String name;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -28,8 +27,8 @@ public class ProductSupplierDoc {
 
     @Override
     public String toString() {
-        return "ProductSupplierDoc{" +
-                "id='" + id + '\'' +
+        return "OrderShipDoc{" +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
     }

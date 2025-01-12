@@ -1,9 +1,14 @@
 package nxu.it.movieapi.eneity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import java.util.List;
+
 public class Product {
     private Integer id;
     private String brand;
     private String name;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Long categoryId;
     private Long barCode;
     private String quantityPerUnit;
@@ -13,11 +18,14 @@ public class Product {
     private Integer unitsTotal;
     private String photo;
     private String photoUrl;
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Object category;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private List<Supplier> suppliers;
     public Product() {
     }
 
-    public Product(Integer id, String brand, String name, Long categoryId, Long barCode, String quantityPerUnit, Double unitPrice, Integer unitsInStock, Integer unitsSell, Integer unitsTotal, String photo, String photoUrl) {
+    public Product(Integer id, String brand, String name, Long categoryId, Long barCode, String quantityPerUnit, Double unitPrice, Integer unitsInStock, Integer unitsSell, Integer unitsTotal, String photo, String photoUrl, Object category, List<Supplier> suppliers) {
         this.id = id;
         this.brand = brand;
         this.name = name;
@@ -30,6 +38,8 @@ public class Product {
         this.unitsTotal = unitsTotal;
         this.photo = photo;
         this.photoUrl = photoUrl;
+        this.category = category;
+        this.suppliers = suppliers;
     }
 
     public Integer getId() {
@@ -128,21 +138,21 @@ public class Product {
         this.photoUrl = photoUrl;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", brand='" + brand + '\'' +
-                ", name='" + name + '\'' +
-                ", categoryId=" + categoryId +
-                ", barCode=" + barCode +
-                ", quantityPerUnit='" + quantityPerUnit + '\'' +
-                ", unitPrice=" + unitPrice +
-                ", unitsInStock=" + unitsInStock +
-                ", unitsSell=" + unitsSell +
-                ", unitsTotal=" + unitsTotal +
-                ", photo='" + photo + '\'' +
-                ", photoUrl='" + photoUrl + '\'' +
-                '}';
+    public Object getCategory() {
+        return category;
     }
+
+    public void setCategory(Object category) {
+        this.category = category;
+    }
+
+    public List<Supplier> getSuppliers() {
+        return suppliers;
+    }
+
+    public void setSuppliers(List<Supplier> suppliers) {
+        this.suppliers = suppliers;
+    }
+
+
 }

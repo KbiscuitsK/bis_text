@@ -1,25 +1,20 @@
-package nxu.it.movieapi.eneity;
+package nxu.it.movieapi.service.doc;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-public class Supplier {
+@Document(collection = "supplier")
+public class SupplierDoc {
+    @Id
     private Long id;
     private String name;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String address;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String province;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String city;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String region;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String contact;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String phone;
-
-    public Supplier() {
-    }
 
     public Long getId() {
         return id;
@@ -98,4 +93,5 @@ public class Supplier {
                 ", phone='" + phone + '\'' +
                 '}';
     }
+
 }

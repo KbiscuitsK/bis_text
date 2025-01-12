@@ -4,12 +4,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document
-public class OrderCustomerDoc {
+public class OrderEmployeeDoc {
+
+
+    private String name;
     @Field("id")
     private Integer id;
-    private String name;
-    private String contact;
+    private String title;
+    private String gender;
     private String phone;
+
     public Integer getId() {
         return id;
     }
@@ -26,12 +30,20 @@ public class OrderCustomerDoc {
         this.name = name;
     }
 
-    public String getContact() {
-        return contact;
+    public String getTitle() {
+        return title;
     }
 
-    public void setContact(String contact) {
-        this.contact = contact;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getPhone() {
@@ -44,10 +56,11 @@ public class OrderCustomerDoc {
 
     @Override
     public String toString() {
-        return "OrderCustomerDoc{" +
-                "id=" + id +
+        return "OrderEmployeeDoc{" +
+                "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", contact='" + contact + '\'' +
+                ", title='" + title + '\'' +
+                ", gender='" + gender + '\'' +
                 ", phone='" + phone + '\'' +
                 '}';
     }
