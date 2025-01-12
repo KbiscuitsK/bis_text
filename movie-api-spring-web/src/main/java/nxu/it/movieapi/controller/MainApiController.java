@@ -36,6 +36,7 @@ public class MainApiController {
      * @param pageQueryParam
      * @return
      */
+    @CrossOrigin(origins = "http://localhost")
     @PostMapping("/products")
     public ApiResult<Pageable<Product>> getProduct(@RequestBody  PageQueryParam pageQueryParam) {
         Pageable<Product> products = productService.page(pageQueryParam);
@@ -47,6 +48,7 @@ public class MainApiController {
      * @param id
      * @return
      */
+    @CrossOrigin(origins = "http://localhost")
     @GetMapping("/product/{id}")
     public ApiResult<Optional<Product>> getProduct(@PathVariable Integer id) {
         Optional<Product> product = productService.pageById(id);
@@ -58,6 +60,7 @@ public class MainApiController {
      * @param param
      * @return
      */
+    @CrossOrigin(origins = "http://localhost")
     @PostMapping("/customers")
     public ApiResult<Pageable<Customer>> getCustomers(@RequestBody PageQueryParam param) {
         Pageable<Customer> page = customerService.page(param);
@@ -69,6 +72,7 @@ public class MainApiController {
      * @param param
      * @return
      */
+    @CrossOrigin(origins = "http://localhost")
     @PostMapping("/employees")
     public ApiResult<Pageable<Employee>> getEmployees(@RequestBody PageQueryParam param) {
         Pageable<Employee> page = employeeService.page(param);
@@ -80,6 +84,7 @@ public class MainApiController {
      * @param param
      * @return
      */
+    @CrossOrigin(origins = "http://localhost")
     @PostMapping("/suppliers")
     public ApiResult<Pageable<Supplier>> getSuppliers(@RequestBody PageQueryParam param) {
         Pageable<Supplier> page = supplierService.page(param);
@@ -91,6 +96,7 @@ public class MainApiController {
      * @param param
      * @return
      */
+    @CrossOrigin(origins = "http://localhost")
     @PostMapping("/shippers")
     public ApiResult<Pageable<Shipper>> getShippers(@RequestBody PageQueryParam param) {
         Pageable<Shipper> page = shipperService.page(param);
@@ -102,6 +108,7 @@ public class MainApiController {
      * @param param
      * @return
      */
+    @CrossOrigin(origins = "http://localhost")
     @PostMapping("/orders")
     public ApiResult<Pageable<Order>> getOrders(@RequestBody PageQueryParam param) {
         Pageable<Order> page = orderService.page(param);
@@ -113,12 +120,14 @@ public class MainApiController {
      * @param id
      * @return
      */
+    @CrossOrigin(origins = "http://localhost")
     @GetMapping("/order/{id}")
     public ApiResult<Optional<Order>> getOrders(@PathVariable String id) {
         Optional<Order> page = orderService.pageById(id);
         return ApiResult.success(page);
     }
 
+    @CrossOrigin(origins = "http://localhost")
     @GetMapping("/authors")
     public ApiResult<List<Author>> getAuthors() {
         List<Author> page =authorService.findAll();
