@@ -8,5 +8,5 @@ import java.util.Optional;
 
 public interface ProductService {
     Pageable<Product> page(PageQueryParam param);
-    Optional<Product> pageById(String id);
+    Optional<Product> pageById(Integer id);
 }

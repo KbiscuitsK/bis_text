@@ -3,11 +3,13 @@ package nxu.it.movieapi.controller;
 import nxu.it.api.common.param.PageQueryParam;
 import nxu.it.api.common.result.ApiResult;
 import nxu.it.api.common.result.Pageable;
+import nxu.it.api.model.Author;
 import nxu.it.movieapi.eneity.*;
 import nxu.it.movieapi.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -26,6 +28,9 @@ public class MainApiController {
     ShipperService shipperService;
     @Autowired
     OrderService orderService;
+    @Autowired
+    AuthorService authorService;
+
     /**
      * 分页查询产品信息
      * @param pageQueryParam
@@ -43,7 +48,7 @@ public class MainApiController {
      * @return
      */
     @GetMapping("/product/{id}")
-    public ApiResult<Optional<Product>> getProduct(@PathVariable String id) {
+    public ApiResult<Optional<Product>> getProduct(@PathVariable Integer id) {
         Optional<Product> product = productService.pageById(id);
         return ApiResult.success(product);
     }
@@ -111,6 +116,12 @@ public class MainApiController {
     @GetMapping("/order/{id}")
     public ApiResult<Optional<Order>> getOrders(@PathVariable String id) {
         Optional<Order> page = orderService.pageById(id);
+        return ApiResult.success(page);
+    }
+
+    @GetMapping("/authors")
+    public ApiResult<List<Author>> getAuthors() {
+        List<Author> page =authorService.findAll();
         return ApiResult.success(page);
     }
 

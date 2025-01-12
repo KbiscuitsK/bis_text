@@ -47,7 +47,7 @@
 
         <dependency>
             <groupId>nxu.it</groupId>
-            <artifactId>movie-api-service-spring-mongo-impl</artifactId>
+            <artifactId>movie-api-service-spring-pg-impl</artifactId>
             <version>3.0</version>
         </dependency>
         <dependency>

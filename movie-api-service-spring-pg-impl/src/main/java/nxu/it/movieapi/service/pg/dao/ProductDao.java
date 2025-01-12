@@ -15,7 +15,7 @@ import java.util.Optional;
 public interface ProductDao {
 
     @Select
-    ProductEntity findById(String id);
+    ProductEntity findById(Integer id);
 
     @Select
     List<ProductEntity> findAll(SelectOptions options);

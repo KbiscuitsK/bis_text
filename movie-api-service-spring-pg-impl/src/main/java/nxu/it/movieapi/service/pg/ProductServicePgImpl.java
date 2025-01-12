@@ -41,7 +41,7 @@ public class ProductServicePgImpl implements ProductService {
     }
 
     @Override
-    public Optional<Product> pageById(String id) {
+    public Optional<Product> pageById(Integer id) {
         return Optional.ofNullable(productMapper.fromEntity(productDao.findById(id)));
     }
 }
