@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+
 @RestController
 @RequestMapping("/manage")
+
 public class MainApiController {
 
     @Autowired
@@ -127,7 +129,7 @@ public class MainApiController {
         return ApiResult.success(page);
     }
 
-    @CrossOrigin(origins = "http://localhost")
+    @CrossOrigin(origins = "http://localhost",allowCredentials = "true")
     @GetMapping("/authors")
     public ApiResult<List<Author>> getAuthors() {
         List<Author> page =authorService.findAll();
